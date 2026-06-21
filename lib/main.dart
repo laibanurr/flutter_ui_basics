@@ -3,7 +3,7 @@
 // Keep this file minimal. Business logic, routing, UI — none of it lives here.
 
 import 'package:flutter/material.dart';
-import 'app.dart'; // We separate app configuration into its own file.
+import 'package:flutter_ui_basics/app.dart'; // We separate app configuration into its own file.
 
 // main() is the Dart VM entry point.
 // runApp() inflates the given widget and attaches it to the screen.

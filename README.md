@@ -1,17 +1,31 @@
-# flutter_ui_basics
+# Flutter UI Basics
 
-A new Flutter project.
+A progressive, exhaustively-documented Flutter engineering course — built from first principles through to production-grade architecture, testing, and deployment.
 
-## Getting Started
+## Purpose
 
-This project is a starting point for a Flutter application.
+This repository tracks deliberate, sequential mastery of the Flutter framework — from rendering pipeline internals (Widget/Element/RenderObject trees) through state management, networking, testing, and CI/CD deployment.
 
-A few resources to get you started if this is your first Flutter project:
+## Engineering Standards
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **Linting:** Strict `very_good_analysis` ruleset — zero warnings tolerated on `main`
+- **Formatting:** `dart format` enforced via format-on-save, 80-character line length
+- **Testing:** Unit, widget, and integration test coverage added per feature
+- **Git hygiene:** Conventional Commits, feature-branch-per-topic workflow
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Structure
+
+lib/
+main.dart
+app.dart
+features/
+  widget_tree/
+test/
+  widget_tree/
+
+## Running This Project
+
+flutter pub get
+flutter analyze
+flutter test
+flutter run

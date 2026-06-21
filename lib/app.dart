@@ -9,6 +9,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_basics/features/widget_tree/widget_tree_demo_screen.dart';
+
 class MyApp extends StatelessWidget {
   // 'const' constructor: tells Flutter this widget's configuration
   // will never change. Flutter can cache and reuse it safely.

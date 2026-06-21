@@ -16,16 +16,15 @@ class WidgetTreeDemoScreen extends StatelessWidget {
   // Flutter NEVER calls build() directly — the Element does.
   @override
   Widget build(BuildContext context) {
-
     // Scaffold implements the basic Material Design visual layout structure.
     // Think of it as the Activity layout root — it provides slots:
     // appBar, body, floatingActionButton, drawer, bottomNavigationBar, etc.
     return Scaffold(
-
       appBar: AppBar(
         // Theme.of(context) walks UP the Element tree from this widget's
-        // position until it finds a Theme ancestor (inserted by MaterialApp).
-        // This is dependency injection via the tree — no singleton, no service locator.
+        // position until it finds a Theme ancestor (inserted by MaterialApp)
+        // This is dependency injection via the tree —
+        // no singleton, no service locator.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Widget Tree Anatomy'),
       ),
@@ -47,7 +46,6 @@ class _TreeDemoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // Column: a layout widget that arranges children vertically.
     // It is a MultiChildRenderObjectWidget — meaning it directly
     // contributes to the RenderObject tree and performs layout.
@@ -56,14 +54,9 @@ class _TreeDemoBody extends StatelessWidget {
       // For Column, main axis = vertical.
       mainAxisAlignment: MainAxisAlignment.center,
 
-      // crossAxisAlignment controls the perpendicular axis.
-      // For Column, cross axis = horizontal.
-      crossAxisAlignment: CrossAxisAlignment.center,
-
       // children is a List<Widget> — each child is a blueprint.
       // Flutter instantiates Elements for each and manages them independently.
       children: [
-
         // A simple Text widget. Immutable. Stateless.
         // Its only job: describe "render this string in this style."
         const Text(
@@ -78,8 +71,9 @@ class _TreeDemoBody extends StatelessWidget {
         const SizedBox(height: 24),
 
         // Container is Flutter's most flexible single-child layout widget.
-        // It combines: padding, margin, decoration, size constraints, alignment.
-        // Android analogy: a FrameLayout with a background drawable, margins, and padding.
+        // It combines: padding, margin, decoration, size constraints, alignment
+        // Android analogy: a FrameLayout with a background
+        // drawable, margins, and padding.
         Container(
           // Padding inside the container's boundary.
           padding: const EdgeInsets.all(16),
@@ -88,7 +82,8 @@ class _TreeDemoBody extends StatelessWidget {
           // The Container itself has no visual — BoxDecoration provides it.
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primaryContainer,
-            // BorderRadius clips the corners. Applied to the decoration, not the widget.
+            // BorderRadius clips the corners.
+            // Applied to the decoration, not the widget.
             borderRadius: BorderRadius.circular(12),
           ),
 
@@ -123,9 +118,9 @@ class _TreeDemoBody extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Text(
-      'Theme accessed via BuildContext\n(a pointer to my Element\'s position)',
+      "Theme accessed via BuildContext\n(a pointer to my Element's position)",
       textAlign: TextAlign.center,
-      // bodyMedium is a Material 3 text style.
+      // bodyMedium is a Ma//terial 3 text style.
       style: textTheme.bodyMedium,
     );
   }
