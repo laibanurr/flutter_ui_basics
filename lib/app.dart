@@ -8,7 +8,7 @@
 // that child widgets access via BuildContext (e.g., Theme.of(context)).
 
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_basics/features/widget_tree/widget_tree_demo_screen.dart';
+import 'package:flutter_ui_basics/features/state_lifecycle/state_lifecycle_demo_screen.dart';
 
 class MyApp extends StatelessWidget {
   // 'const' constructor: tells Flutter this widget's configuration
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // home is the widget displayed at the '/' route.
-      home: const WidgetTreeDemoScreen(),
+      home: const StateLifecycleDemoScreen(),
     );
   }
 }
