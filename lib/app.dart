@@ -8,7 +8,7 @@
 // that child widgets access via BuildContext (e.g., Theme.of(context)).
 
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_basics/features/keys_demo/keys_demo_screen.dart';
+import 'package:flutter_ui_basics/features/inherited_widgets/inherited_widget_demo_screen.dart';
 
 class MyApp extends StatelessWidget {
   // 'const' constructor: tells Flutter this widget's configuration
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // home is the widget displayed at the '/' route.
-      home: const KeysDemoScreen(),
+      home: const InheritedWidgetDemoScreen(),
     );
   }
 }

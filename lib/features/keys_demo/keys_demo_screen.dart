@@ -13,8 +13,7 @@ class KeysDemoScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor:
-              Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text('Keys Deep Dive'),
           // ─── NOTE: TabBar gives us three tabs to demonstrate
           // each Key type in isolation — cleaner than one long screen.
@@ -28,9 +27,9 @@ class KeysDemoScreen extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            _NoBugDemo(),      // Tab 1: shows the bug without keys
-            _ValueKeyDemo(),   // Tab 2: fixes it with ValueKey
-            _GlobalKeyDemo(),  // Tab 3: demonstrates GlobalKey
+            _NoBugDemo(), // Tab 1: shows the bug without keys
+            _ValueKeyDemo(), // Tab 2: fixes it with ValueKey
+            _GlobalKeyDemo(), // Tab 3: demonstrates GlobalKey
           ],
         ),
       ),
@@ -111,9 +110,9 @@ class _NoBugDemoState extends State<_NoBugDemo> {
 // This internal state is what gets "lost" during the swap bug.
 class _ColorBox extends StatefulWidget {
   const _ColorBox({
-    super.key,
     required this.color,
     required this.label,
+    super.key,
   });
 
   final Color color;
@@ -276,7 +275,7 @@ class _GlobalKeyDemoState extends State<_GlobalKeyDemo> {
             ),
             child: Text(
               'GlobalKey lets a PARENT directly access\n'
-              'a child\'s State object and call methods on it.\n'
+              "a child's State object and call methods on it.\n"
               'The button below lives in the PARENT but controls\n'
               'the counter that lives in the CHILD.',
               style: Theme.of(context).textTheme.bodySmall,
